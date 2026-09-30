@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jubbal.github.io/empresariosciegos/sitemap.xml
