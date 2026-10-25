@@ -277,6 +277,48 @@
       max-width: 760px;
     }
 
+
+    .case-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 38px;
+    }
+    .case-shot {
+      margin: 0;
+      min-width: 0;
+      background: #FAF7F0;
+      border: 1px solid #D7D0C4;
+      padding: 10px;
+    }
+    .case-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      background: #E5DED2;
+    }
+    .case-shot figcaption {
+      padding: 13px 5px 4px;
+      color: var(--petrol);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .case-shot figcaption strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--terra);
+      font-size: 12px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .case-disclaimer {
+      margin-top: 20px;
+      color: #D5D6D3;
+      font-size: 12px;
+    }
+
     .evidence-note {
       border-left: 3px solid var(--terra);
       padding-left: 18px;
@@ -332,6 +374,7 @@
       .product-grid { grid-template-columns: 1fr; }
       .product { min-height: auto; }
       .method-grid { grid-template-columns: 1fr; gap: 28px; }
+      .case-gallery { grid-template-columns: 1fr; gap: 16px; }
       .hero { padding: 70px 0 65px; }
       .intro, .method, .evidence, .closing { padding-block: 56px; }
       .nav { min-height: 68px; }
@@ -490,10 +533,53 @@
           <div class="eyebrow">Un enfoque aplicado</div>
           <h2>Sistemas construidos para observar la gestión comercial real.</h2>
           <p>
-            La propuesta parte de una experiencia piloto de organización
-            y seguimiento comercial. En la presentación final incorporaremos
-            capturas reales protegidas para mostrar cómo se organiza la
-            información y qué elementos del proceso pueden observarse.
+            Este caso piloto de Carboutique muestra cómo se puede ordenar
+            el inventario, registrar consultas comerciales y observar el
+            estado de seguimiento desde un tablero de control. Las capturas
+            conservan la apariencia real del sistema; los datos sensibles
+            se encuentran difuminados.
+          </p>
+          <div class="case-gallery" aria-label="Capturas del sistema comercial piloto">
+            <figure class="case-shot">
+              <img src="pantalla-bitacora-leads-2k.jpg"
+                   alt="Bitácora de leads del sistema comercial de Carboutique, con datos personales difuminados"
+                   loading="lazy">
+              <figcaption>
+                <strong>01 · Bitácora de leads</strong>
+                Consultas registradas, estado actual, fecha de recontacto y comentarios.
+              </figcaption>
+            </figure>
+            <figure class="case-shot">
+              <img src="pantalla-inventario-2k.jpg"
+                   alt="Hoja de inventario del sistema comercial de Carboutique"
+                   loading="lazy">
+              <figcaption>
+                <strong>02 · Inventario</strong>
+                Organización de los vehículos y de la información relevante para la gestión.
+              </figcaption>
+            </figure>
+            <figure class="case-shot">
+              <img src="pantalla-vendidos-historico-2k.jpg"
+                   alt="Histórico de vehículos vendidos con patentes y precios difuminados"
+                   loading="lazy">
+              <figcaption>
+                <strong>03 · Histórico de vendidos</strong>
+                Registro de operaciones anteriores para conservar trazabilidad comercial.
+              </figcaption>
+            </figure>
+            <figure class="case-shot">
+              <img src="Pantalla - Panel de control y auditoría-2k.png"
+                   alt="Tablero de control y auditoría comercial con indicadores y seguimiento pendiente"
+                   loading="lazy">
+              <figcaption>
+                <strong>04 · Control y auditoría</strong>
+                Indicadores del sistema y vista de las acciones de seguimiento pendientes.
+              </figcaption>
+            </figure>
+          </div>
+          <p class="case-disclaimer">
+            Caso piloto ilustrativo. Los indicadores visibles corresponden a una captura
+            puntual y no constituyen, por sí solos, evidencia de mejora en las ventas.
           </p>
           <p class="evidence-note">
             Las funciones y los resultados se comunicarán de acuerdo con
