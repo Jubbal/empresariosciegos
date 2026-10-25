@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17232D">
+  <meta name="description" content="Sistemas de gestión comercial de EMPRESARIOS CIEGOS. Seguimiento de ventas, fidelización de clientes y auditoría comercial con consultoría personalizada.">
+  <title>Sistemas de Gestión Comercial | EMPRESARIOS CIEGOS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --petrol: #17232D;
+      --ivory: #F0E9DC;
+      --terra: #A34F3D;
+      --stone: #B8B3A8;
+      --graphite: #343D42;
+      --white: #FFFFFF;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--petrol);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: var(--petrol);
+      color: var(--ivory);
+      border-bottom: 1px solid #46515A;
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--ivory);
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: .035em;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--terra); }
+
+    .back-link {
+      color: var(--ivory);
+      text-decoration: none;
+      font-size: 13px;
+      border-bottom: 1px solid var(--terra);
+      padding-bottom: 4px;
+    }
+
+    .hero {
+      background: var(--petrol);
+      color: var(--ivory);
+      padding: 96px 0 88px;
+    }
+
+    .eyebrow {
+      color: #D9A08F;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.25;
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(38px, 6vw, 66px);
+      letter-spacing: -.045em;
+      margin: 22px 0;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #D5D6D3;
+      font-size: 17px;
+    }
+
+    .hero-rule {
+      width: 70px;
+      height: 4px;
+      background: var(--terra);
+      margin: 30px 0;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 20px;
+      background: var(--terra);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--terra);
+      transition: background .2s ease;
+    }
+
+    .button:hover { background: #873D30; }
+
+    .intro {
+      padding: 76px 0 50px;
+    }
+
+    .intro h2, .section-heading {
+      max-width: 760px;
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -.025em;
+    }
+
+    .intro p {
+      max-width: 780px;
+      color: #4C5558;
+    }
+
+    .products {
+      padding: 28px 0 86px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      background: #FAF7F0;
+      border: 1px solid #D7D0C4;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .number {
+      color: var(--terra);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      margin-bottom: 24px;
+    }
+
+    .product h3 {
+      font-size: 23px;
+      margin-bottom: 16px;
+    }
+
+    .product p {
+      color: #50585A;
+      font-size: 14px;
+    }
+
+    .product ul {
+      padding-left: 19px;
+      color: #50585A;
+      font-size: 13px;
+      margin: 14px 0 24px;
+    }
+
+    .product li { margin-bottom: 8px; }
+
+    .product a {
+      margin-top: auto;
+      display: inline-block;
+      width: fit-content;
+      color: var(--terra);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      border-bottom: 1px solid var(--terra);
+      padding-bottom: 4px;
+    }
+
+    .method {
+      background: #E5DED2;
+      padding: 76px 0;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .method h2 {
+      font-size: clamp(28px, 4vw, 40px);
+    }
+
+    .method p { color: #4C5558; }
+
+    .steps {
+      border-top: 1px solid #C3BAAD;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 15px;
+      padding: 19px 0;
+      border-bottom: 1px solid #C3BAAD;
+    }
+
+    .step-number {
+      color: var(--terra);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .step p {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .evidence {
+      padding: 76px 0;
+    }
+
+    .evidence-panel {
+      background: var(--petrol);
+      color: var(--ivory);
+      padding: clamp(26px, 5vw, 52px);
+    }
+
+    .evidence-panel h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      max-width: 700px;
+    }
+
+    .evidence-panel p {
+      color: #D5D6D3;
+      max-width: 760px;
+    }
+
+    .evidence-note {
+      border-left: 3px solid var(--terra);
+      padding-left: 18px;
+      margin-top: 26px;
+      font-size: 13px;
+    }
+
+    .closing {
+      background: var(--terra);
+      color: var(--white);
+      padding: 76px 0;
+    }
+
+    .closing h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      max-width: 760px;
+    }
+
+    .closing p {
+      max-width: 650px;
+      color: #F5E8E2;
+    }
+
+    .closing .button {
+      background: var(--ivory);
+      border-color: var(--ivory);
+      color: var(--petrol);
+      margin-top: 15px;
+    }
+
+    .closing .button:hover { background: #DED4C4; }
+
+    footer {
+      background: var(--petrol);
+      color: var(--stone);
+      padding: 27px 0;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: var(--ivory);
+      text-decoration: none;
+    }
+
+    @media (max-width: 800px) {
+      .product-grid { grid-template-columns: 1fr; }
+      .product { min-height: auto; }
+      .method-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero { padding: 70px 0 65px; }
+      .intro, .method, .evidence, .closing { padding-block: 56px; }
+      .nav { min-height: 68px; }
+    }
+
+    @media (max-width: 420px) {
+      .container { width: calc(100% - 28px); }
+      .brand { font-size: 12px; }
+      .back-link { font-size: 11px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="https://jubal.com.ar/">
+        EMPRESARIOS <span>CIEGOS</span>
+      </a>
+      <a class="back-link" href="https://jubal.com.ar/">
+        Volver al sitio principal ↗
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Gestión comercial · Consultoría · Auditoría</div>
+        <h1>Lo que sucede en tu gestión comercial también necesita ser observado.</h1>
+        <div class="hero-rule"></div>
+        <p>
+          Sistemas para organizar el seguimiento de oportunidades, cuidar
+          las relaciones con los clientes y comprender mejor cómo funciona
+          el proceso comercial de una empresa.
+        </p>
+        <a class="button" href="#soluciones">Conocer los sistemas ↓</a>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <div class="eyebrow">La mirada aplicada a la gestión</div>
+        <h2>No se trata de acumular datos. Se trata de entender qué está pasando.</h2>
+        <p>
+          Una consulta puede quedar pendiente. Un seguimiento puede perder
+          continuidad. Un cliente puede dejar de comprar sin que la empresa
+          advierta a tiempo la necesidad de revisar esa relación.
+        </p>
+        <p>
+          En EMPRESARIOS CIEGOS combinamos sistemas de gestión, personalización
+          y consultoría para organizar la información, observar los procesos
+          comerciales y detectar oportunidades de mejora.
+        </p>
+      </div>
+    </section>
+
+    <section class="products" id="soluciones">
+      <div class="container">
+        <div class="eyebrow">Tres alternativas</div>
+        <h2 class="section-heading">Una solución para cada momento de la relación comercial.</h2>
+
+        <div class="product-grid">
+          <article class="product">
+            <div class="number">01 / VENTAS</div>
+            <h3>Sistema de Ventas y Auditoría Comercial</h3>
+            <p>
+              Organiza el seguimiento de consultas y oportunidades para
+              comprender cómo avanzan y qué acciones quedan pendientes.
+            </p>
+            <ul>
+              <li>Registro y seguimiento de consultas.</li>
+              <li>Acciones pendientes y próximos pasos.</li>
+              <li>Historial y estados comerciales.</li>
+              <li>Indicadores y auditoría del proceso.</li>
+            </ul>
+            <a href="#contacto">Evaluar esta solución ↓</a>
+          </article>
+
+          <article class="product">
+            <div class="number">02 / FIDELIZACIÓN</div>
+            <h3>Sistema de Fidelización y Auditoría de Cartera</h3>
+            <p>
+              Ayuda a organizar el seguimiento posterior a la venta y a
+              identificar relaciones que podrían necesitar atención.
+            </p>
+            <ul>
+              <li>Organización de la cartera de clientes.</li>
+              <li>Registro de interacciones.</li>
+              <li>Continuidad y reactivación de relaciones.</li>
+              <li>Auditoría del seguimiento de clientes.</li>
+            </ul>
+            <a href="#contacto">Evaluar esta solución ↓</a>
+          </article>
+
+          <article class="product">
+            <div class="number">03 / INTEGRAL</div>
+            <h3>Solución Integral de Gestión Comercial</h3>
+            <p>
+              Conecta el seguimiento de oportunidades con la gestión
+              posterior de los clientes en una visión comercial más completa.
+            </p>
+            <ul>
+              <li>Proceso de ventas y oportunidades.</li>
+              <li>Gestión de la cartera de clientes.</li>
+              <li>Indicadores y auditoría relacionados.</li>
+              <li>Planificación de mejoras.</li>
+            </ul>
+            <a href="#contacto">Evaluar esta solución ↓</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="method">
+      <div class="container method-grid">
+        <div>
+          <div class="eyebrow">Cómo trabajamos</div>
+          <h2>Primero comprendemos. Después diseñamos. Luego observamos qué sucede.</h2>
+          <p>
+            Cada empresa tiene su propio funcionamiento. Por eso, el sistema
+            se adapta a sus procesos, necesidades y recursos, en lugar de
+            imponer una estructura idéntica para todos.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div>
+              <strong>Diagnóstico</strong>
+              <p>Comprender el proceso comercial y las necesidades de la empresa.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <div>
+              <strong>Personalización e implementación</strong>
+              <p>Adaptar la estructura, establecer responsabilidades y capacitar al equipo.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <div>
+              <strong>Auditoría y mejora continua</strong>
+              <p>Revisar los registros, los pendientes y las oportunidades de mejora.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence">
+      <div class="container">
+        <div class="evidence-panel">
+          <div class="eyebrow">Un enfoque aplicado</div>
+          <h2>Sistemas construidos para observar la gestión comercial real.</h2>
+          <p>
+            La propuesta parte de una experiencia piloto de organización
+            y seguimiento comercial. En la presentación final incorporaremos
+            capturas reales protegidas para mostrar cómo se organiza la
+            información y qué elementos del proceso pueden observarse.
+          </p>
+          <p class="evidence-note">
+            Las funciones y los resultados se comunicarán de acuerdo con
+            lo que pueda verificarse. No se atribuirán mejoras de ventas
+            que todavía no hayan sido medidas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="contacto">
+      <div class="container">
+        <div class="eyebrow">El siguiente paso</div>
+        <h2>¿Qué necesita observar y mejorar tu empresa?</h2>
+        <p>
+          El punto de partida es un diagnóstico inicial para comprender
+          tu situación y evaluar qué alternativa puede ser adecuada.
+          La implementación y el servicio se definen según el alcance
+          acordado para cada empresa.
+        </p>
+        <a class="button" href="https://jubal.com.ar/">
+          Contactar a Jubal desde el sitio principal ↗
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>EMPRESARIOS CIEGOS · Barro, café y control.</span>
+      <a href="https://jubal.com.ar/">jubal.com.ar</a>
+    </div>
+  </footer>
+</body>
+</html>
