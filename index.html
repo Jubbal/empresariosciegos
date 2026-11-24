@@ -170,7 +170,34 @@ html{scroll-padding-top:76px}
 @media(max-width:980px){.top-nav{align-items:flex-start;flex-direction:column;gap:10px;padding-top:13px;padding-bottom:13px}.nav-links{width:100%;justify-content:flex-start;overflow-x:auto;padding:3px 0 7px;gap:20px;scrollbar-width:thin}.nav-links a{font-size:.75rem}.site-header{position:sticky}}
 @media(max-width:480px){.nav-brand{font-size:.8rem}.top-nav{width:calc(100% - 28px)}}
 
+
+/* Google Preferred Sources: bloque aislado, sin alterar componentes existentes */
+.preferred-source{
+  margin-top:42px;
+  padding-top:28px;
+  border-top:1px solid rgba(240,233,220,.22);
+  max-width:620px;
+}
+.preferred-source p{
+  margin:0 0 14px;
+  color:#c8d0d3;
+  font-size:.9rem;
+  line-height:1.65;
+}
+.preferred-source strong{
+  display:block;
+  margin-bottom:7px;
+  color:var(--ivory);
+  font-family:var(--serif);
+  font-size:1.2rem;
+  font-weight:400;
+}
+.preferred-source-button{
+  min-height:44px;
+}
+
 </style>
+  <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -377,6 +404,12 @@ html{scroll-padding-top:76px}
     <div class="footer-grid">
       <div><img class="brand-logo footer-logo" src="logo-empresarios-ciegos-claro.png" alt="Logo de Empresarios Ciegos"><small class="brand-tagline">Estatus, traición y procesos</small><h2 style="margin-top:42px">¿Tu empresa necesita una mirada diferente?</h2><p class="lead">A veces, el primer paso no es buscar otra solución, sino comprender qué está pasando realmente. Empecemos por una conversación sobre tu empresa.</p><p><strong>La Primera Mirada</strong></p></div>
       <a class="btn" href="https://wa.me/5493815218798?text=Hola%2C%20quiero%20conversar%20sobre%20mi%20empresa.">Contactar por WhatsApp ↗</a>
+    </div>
+
+    <div class="preferred-source">
+      <strong>EMPRESARIOS CIEGOS, entre tus fuentes preferidas</strong>
+      <p>Si querés seguir leyendo nuestras ideas sobre empresas, gestión y procesos, podés agregar este sitio a tus fuentes preferidas de Google.</p>
+      <div class="preferred-source-button" google-add-preferred-source-btn data-theme="dark"></div>
     </div>
     <p class="muted" style="font-size:.82rem;margin:30px 0 0;max-width:760px"><strong>Vinculación tecnológica</strong><br>Para proyectos de desarrollo web, automatización e inteligencia artificial, conozco y recomiendo el trabajo de <a href="https://www.noaxws.com/" target="_blank" rel="noopener noreferrer">NOAX</a>, consultoría tecnológica para PyMEs del NOA.</p>
     <div class="footer-note"><span>© EMPRESARIOS CIEGOS · Jubal</span><span>Una mirada antes de intervenir.</span></div>
