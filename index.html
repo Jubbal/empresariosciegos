@@ -161,13 +161,13 @@ section.dark .section-head .lead{
 html{scroll-padding-top:76px}
 [id]{scroll-margin-top:76px}
 .site-header{position:sticky;top:0;z-index:1000;background:rgba(23,35,45,.97);border-bottom:1px solid rgba(240,233,220,.16);backdrop-filter:blur(12px)}
-.top-nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+.top-nav{min-height:70px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 26px;padding-top:10px;padding-bottom:10px}
 .nav-brand{flex:0 0 auto;color:var(--ivory);font-weight:800;font-size:.88rem;letter-spacing:.055em;text-decoration:none;white-space:nowrap}
 .nav-brand span{color:#F05A24}
-.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.6vw,24px)}
+.nav-links{display:flex;flex:1 1 700px;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:9px 18px;min-width:0}
 .nav-links a{color:var(--ivory);font-size:.76rem;font-weight:600;text-decoration:none;white-space:nowrap;opacity:.88;transition:color .2s,opacity .2s}
 .nav-links a:hover,.nav-links a:focus-visible{color:#F05A24;opacity:1}
-@media(max-width:980px){.top-nav{align-items:flex-start;flex-direction:column;gap:10px;padding-top:13px;padding-bottom:13px}.nav-links{width:100%;justify-content:flex-start;overflow-x:auto;padding:3px 0 7px;gap:20px;scrollbar-width:thin}.nav-links a{font-size:.75rem}.site-header{position:sticky}}
+@media(max-width:980px){.top-nav{align-items:flex-start;flex-direction:column;gap:10px;padding-top:13px;padding-bottom:13px}.nav-links{width:100%;flex:1 1 auto;justify-content:flex-start;flex-wrap:wrap;overflow:visible;padding:3px 0 7px;gap:10px 18px}.nav-links a{font-size:.75rem}.site-header{position:sticky}}
 @media(max-width:480px){.nav-brand{font-size:.8rem}.top-nav{width:calc(100% - 28px)}}
 
 
@@ -207,7 +207,6 @@ html{scroll-padding-top:76px}
       <a href="#espejo">El espejo</a>
       <a href="#empresas-invisibles">Lo invisible</a>
       <a href="#cafe">Café</a>
-      <a href="https://jubal.com.ar/publicaciones/">Barro, Tinta y Café</a>
       <a href="#metodo">La Mirada</a>
       <a href="#cirugia">La Cirugía</a>
       <a href="#consultorias">Consultorías</a>
